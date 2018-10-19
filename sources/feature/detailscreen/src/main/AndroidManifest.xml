@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.n0lik.test.detailscreen">
+
+    <application>
+        <activity
+            android:name = "co.n0lik.test.detailscreen.DetailActivity"
+            android:configChanges="screenSize"
+            android:label="@string/detail_title"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

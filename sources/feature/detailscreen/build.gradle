@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+kapt {
+    arguments{
+        arg("moxyReflectorPackage" , "co.n0lik.test.detailscreen")
+    }
+}
+
+dependencies {
+    //Core
+    implementation project (':core')
+    //Kotlin
+    implementation deps.kotlin.stdlib
+    //Support libs
+    implementation deps.support.app_compat
+    implementation deps.support.recyclerview
+    implementation deps.support.design
+    implementation deps.constraint
+    //Moxy
+    implementation deps.moxy.moxy
+    implementation deps.moxy.moxy_app_compat
+    kapt deps.moxy.compiler
+    //Dagger2
+    implementation deps.dagger.runtime
+    kapt deps.dagger.compiler
+    //Test
+    androidTestImplementation deps.espresso.core
+    androidTestImplementation deps.atsl.runner
+    androidTestImplementation deps.atsl.rules
+    testImplementation deps.junit
+}

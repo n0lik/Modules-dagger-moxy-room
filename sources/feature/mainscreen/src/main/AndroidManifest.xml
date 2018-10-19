@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.n0lik.test.mainscreen" >
+
+    <application
+        android:label="@string/app_name">
+        <activity
+            android:name="co.n0lik.test.mainscreen.MainActivity"
+            android:configChanges="screenSize"
+            android:label="@string/main_title"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

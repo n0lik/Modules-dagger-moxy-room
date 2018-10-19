@@ -1,0 +1,18 @@
+include(':injector')
+project(':injector').projectDir = new File(rootDir, 'sources/base/injector')
+
+include ':core'
+project(':core').projectDir = new File(rootDir, 'sources/base/core')
+
+include ':repo'
+project(':repo').projectDir = new File(rootDir, 'sources/base/repo')
+
+include ':db'
+project(':db').projectDir = new File(rootDir, 'sources/base/db')
+
+include ':mainscreen'
+project(':mainscreen').projectDir = new File(rootDir, 'sources/feature/mainscreen')
+
+include ':detailscreen'
+project(':detailscreen').projectDir = new File(rootDir, 'sources/feature/detailscreen')
+
