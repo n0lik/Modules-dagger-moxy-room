@@ -1,3 +1,3 @@
 # Modules-dagger-moxy-room
 
-This sample demonstrate modular implementation using Dagger2/Moxy/Room.
+This sample demonstrates the modular implementation using Dagger2/Moxy/Room.
